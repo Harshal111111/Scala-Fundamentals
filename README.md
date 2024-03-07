@@ -37,4 +37,12 @@ if a variable is integer and we want to change it to string this is not possible
 4. Names should be descriptive not too short not to long.
 5. Names should be written in camel case. 
 - example: `productPricePerUnit`
-![img.png](img.png)
+
+### String Functions:
+- The functions which we can apply to our strings.
+  1. Length of the string: This can be done by using the function `.length`
+  -example:
+  ```scala code
+  var myVar = "this is variable"
+  println(myVar.length) // print the length of the variable
+```
