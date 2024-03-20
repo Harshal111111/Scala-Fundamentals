@@ -165,8 +165,15 @@ println(Iterator.continually(Random.nextPrintableChar()).take(20).mkString)
 ```
 ###### Types of Numbers in scala: 
 ```scala code
-val number1 = 11.22
-println(number1.getClass) // double
 
-val number2 = 800000000000000
+val number1 = 33.22
+println(number1.getClass) //double
+val number2 = 34
+println(number2.getClass) //int
+val number3 = 80000000000l // l is used to remove the number is to large error. o/p = long
+println(number3.getClass)
+val number4 = 34.34f
+println(number4.getClass) //float
+val number5 = 20_000_000
+println(number5.getClass) //int
 ```
