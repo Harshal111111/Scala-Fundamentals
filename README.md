@@ -97,3 +97,76 @@ also we can find length of the string after removing the spaces.
 ```scala code
 println(myText.trim.length)
 ```
+**note**: we can use combination of the above methods, until its same variable type, and to find the list of functions available for a variable we can just do `mytext.` and this is  will generate whole list of functions available for that particular variable.
+
+### String Interpolation:
+String Interpolation simply mean we can insert some other variables or expressions inside our strings.
+
+*In Scala we have 3 types of interpolators* :
+1. s
+2. f
+3. raw: it does'nt really interpolate the strings, like it ignores `\n` and `\\`
+
+- example: 
+```scala code 
+val myName = "Harshal"
+println(s"My name is $myName") // expressions starts with $ sign and can have braces {}
+```
+```scala code 
+val height = 1.75
+val formattedString = f"My height is $height%2.2f meters."
+```
+```scala code
+  println(s"this is a \n new line") // this is generate new line.
+  println(raw"this is a \n new line") // this will not generate new line.
+```
+### Multiline Strings:
+- There are several ways to create multiline strings:
+1. Using `\n`:
+```scala code 
+val str1 = "this is\na multiline\nstring!!"
+println(str1)
+```
+2. using `"""` operator: 
+```scala code 
+ val str2 ="""this is a
+    multiline
+    string"""
+println(str2)
+
+val str3 =
+  """this is a
+    |multiline
+    |string
+    |""".stripMargin // this is used to remove spaces.
+println(str3)
+```
+### Getting User Input: 
+- User input can come from many sources.
+1. Through command line:
+```scala code
+println("Enter your name:")
+val input = StdIn.readline()
+println(s"Hello ${input}")
+```
+###### Getting number as a input:
+- Inputs a read as strings and can be converted into numbers (integers).
+```scala code
+val input = StdIn.readline()
+val i = input.toInt
+```
+###### Generating a random number:
+```scala code
+println(Random.nextInt())
+println(s"Random number generated: ${Random.nextInt(1000)}")
+println((Random.nextString(30)))
+println(Random.nextPrintableChar())
+println(Iterator.continually(Random.nextPrintableChar()).take(20).mkString)
+```
+###### Types of Numbers in scala: 
+```scala code
+val number1 = 11.22
+println(number1.getClass) // double
+
+val number2 = 800000000000000
+```
